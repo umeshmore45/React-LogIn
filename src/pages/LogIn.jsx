@@ -5,14 +5,17 @@ import { logInurl } from "../services/FetchData";
 
 class LogIn extends Component {
   state = {
+    message: [],
     jwtToken: {},
   };
 
   changeRoute = (event) => {
-    this.props.history.push({
-      pathname: "/todo",
-      state: this.state.jwtToken,
-    });
+    if (this.state.jwtToken) {
+      this.props.history.push({
+        pathname: "/todo",
+        state: this.state.jwtToken,
+      });
+    }
   };
 
   LogInSubmit = (event) => {
@@ -33,6 +36,12 @@ class LogIn extends Component {
         return response.json();
       })
       .then((data) => {
+        if (data.status === "UnSuccessful") {
+          this.setState({
+            message: data,
+          });
+        }
+
         this.setState({
           jwtToken: data.data[0].jwt,
         });
@@ -50,6 +59,7 @@ class LogIn extends Component {
       <div>
         <h1>Login</h1>
         <LogInFrom LogInSubmit={this.LogInSubmit} />
+        <p>{this.state.message.message}</p>
       </div>
     );
   }

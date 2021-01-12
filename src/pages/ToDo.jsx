@@ -5,6 +5,8 @@ import { todoUrl } from "../services/FetchData";
 
 class ToDo extends Component {
   state = {
+    email: "",
+    jwtToken: "",
     todoList: [],
   };
 
@@ -60,28 +62,34 @@ class ToDo extends Component {
   };
 
   componentDidMount = (event) => {
-    fetch(todoUrl, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + this.props.location.state.jwtToken,
-      },
-      body: JSON.stringify(),
-    })
-      .then((response) => {
-        console.log(response);
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-        this.setState({
-          todoList: data,
-        });
-      })
-      .catch((e) => {
-        console.log(e);
-        return e;
+    if (this.props.location.state) {
+      this.setState({
+        email: this.props.location.state.email,
+        jwtToken: this.props.location.state.jwtToken,
       });
+      fetch(todoUrl, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + this.props.location.state.jwtToken,
+        },
+        body: JSON.stringify(),
+      })
+        .then((response) => {
+          console.log(response);
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          this.setState({
+            todoList: data,
+          });
+        })
+        .catch((e) => {
+          console.log(e);
+          return e;
+        });
+    }
   };
 
   render() {
@@ -89,6 +97,9 @@ class ToDo extends Component {
       <div>
         {this.props.location.state ? (
           <div>
+            <p>
+              {this.state.email.substring(0, this.state.email.lastIndexOf("@"))}
+            </p>
             <ToDoFrom submitForm={this.submitForm} />
             <ToDoShow todo={this.state.todoList} deleteTask={this.deleteTask} />
           </div>

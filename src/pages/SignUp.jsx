@@ -28,8 +28,11 @@ class SignUp extends Component {
     });
   };
 
-  changeRoute = (event) => {
-    this.props.history.push("/");
+  changeRoute = (data) => {
+    this.props.history.push({
+      pathname: "/",
+      state: data,
+    });
   };
 
   SignUpSubmit = (event) => {
@@ -53,7 +56,7 @@ class SignUp extends Component {
       })
       .then((data) => {
         console.log(data);
-        this.changeRoute();
+        this.changeRoute(data);
       })
 
       .catch((e) => {

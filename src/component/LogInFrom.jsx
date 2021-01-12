@@ -12,7 +12,7 @@ class LogInFrom extends Component {
           <input
             type="email"
             name="LogInEmail"
-            onChange={this.updateSignup}
+            onChange={this.props.updateEmail}
             required
           />
           <br />
@@ -23,7 +23,7 @@ class LogInFrom extends Component {
           <input
             type="passWord"
             name="LogInPassword"
-            onChange={this.updateLogIn}
+            onChange={this.props.updatePassword}
             required
           />
           <br />

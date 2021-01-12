@@ -15,7 +15,7 @@ class ToDo extends Component {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + this.props.location.state,
+        Authorization: "Bearer " + this.props.location.state.jwtToken,
       },
       body: JSON.stringify({ taskName: event.target.TodoInput.value }),
     })
@@ -41,7 +41,7 @@ class ToDo extends Component {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + this.props.location.state,
+        Authorization: "Bearer " + this.props.location.state.jwtToken,
       },
       body: JSON.stringify(),
     })
@@ -64,7 +64,7 @@ class ToDo extends Component {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + this.props.location.state,
+        Authorization: "Bearer " + this.props.location.state.jwtToken,
       },
       body: JSON.stringify(),
     })

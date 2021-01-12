@@ -1,25 +1,41 @@
 import { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class LogInFrom extends Component {
   render() {
     return (
       <div>
         <form onSubmit={this.props.LogInSubmit}>
-          <label htmlFor="LogInEmail">Email </label>
-          <input type="email" name="LogInEmail" onChange={this.updateSignup} />
-          <br />
-          <br />
-          <label htmlFor="LogInPassword">Password </label>
+          <label htmlFor="LogInEmail">
+            Email<span className="span-global">* </span>{" "}
+          </label>
           <input
-            type="passWord"
-            name="LogInPassword"
-            onChange={this.updateLogIn}
+            type="email"
+            name="LogInEmail"
+            onChange={this.props.updateEmail}
+            required
           />
           <br />
           <br />
+          <label htmlFor="LogInPassword">
+            Password<span className="span-global">* </span>
+          </label>
+          <input
+            type="passWord"
+            name="LogInPassword"
+            onChange={this.props.updatePassword}
+            required
+          />
+          <br />
+          <br />
+          <p>
+            Don't have an account yet ?<Link to="/signup"> Sign Up</Link>
+          </p>
 
           <button type="submit"> Login</button>
+          <Link to="/">
+            <button>Go Back</button>
+          </Link>
         </form>
       </div>
     );

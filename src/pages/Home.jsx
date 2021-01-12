@@ -1,11 +1,20 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
+import styles from "../styles/pages/Home.module.css";
 
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className={styles["main-container"]}>
         <h1>Welcome Home</h1>
+        {this.props.location.state ? (
+          <p>
+            {this.props.location.state.status} SignUp{" "}
+            {this.props.location.state.data.email}{" "}
+          </p>
+        ) : (
+          <p></p>
+        )}
 
         <Link to="/signup">
           {" "}

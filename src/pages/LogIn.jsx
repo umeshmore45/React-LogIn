@@ -5,34 +5,56 @@ import { logInurl } from "../services/FetchData";
 
 class LogIn extends Component {
   state = {
+    email: "",
+    password: "",
+    message: [],
     jwtToken: {},
   };
 
-  changeRoute = (event) => {
-    this.props.history.push({
-      pathname: "/todo",
-      state: this.state.jwtToken,
+  updateEmail = (e) => {
+    this.setState({
+      email: e.target.value,
     });
+  };
+
+  updatePassword = (e) => {
+    this.setState({
+      password: e.target.value,
+    });
+  };
+
+  changeRoute = (event) => {
+    if (this.state.jwtToken) {
+      this.props.history.push({
+        pathname: "/todo",
+        state: this.state,
+      });
+    }
   };
 
   LogInSubmit = (event) => {
     event.preventDefault();
-    console.log(event.target.LogInEmail.value);
-    console.log(event.target.LogInPassword.value);
+
     fetch(logInurl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email: event.target.LogInEmail.value,
-        password: event.target.LogInPassword.value,
+        email: this.state.email,
+        password: this.state.password,
       }),
     })
       .then((response) => {
         return response.json();
       })
       .then((data) => {
+        if (data.status === "UnSuccessful") {
+          this.setState({
+            message: data,
+          });
+        }
+
         this.setState({
           jwtToken: data.data[0].jwt,
         });
@@ -49,7 +71,12 @@ class LogIn extends Component {
     return (
       <div>
         <h1>Login</h1>
-        <LogInFrom LogInSubmit={this.LogInSubmit} />
+        <LogInFrom
+          LogInSubmit={this.LogInSubmit}
+          updateEmail={this.updateEmail}
+          updatePassword={this.updatePassword}
+        />
+        <p>{this.state.message.message}</p>
       </div>
     );
   }

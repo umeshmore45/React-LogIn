@@ -100,6 +100,7 @@ class ToDo extends Component {
             <p>
               {this.state.email.substring(0, this.state.email.lastIndexOf("@"))}
             </p>
+            <button onClick={this.componentWillUnmount}>Log Out</button>
             <ToDoFrom submitForm={this.submitForm} />
             <ToDoShow todo={this.state.todoList} deleteTask={this.deleteTask} />
           </div>
@@ -109,6 +110,13 @@ class ToDo extends Component {
       </div>
     );
   }
+
+  componentWillUnmount = (event) => {
+    this.props.history.push({
+      pathname: "/",
+      state: "",
+    });
+  };
 }
 
 export default ToDo;

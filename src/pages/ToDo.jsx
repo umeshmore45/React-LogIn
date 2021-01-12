@@ -87,8 +87,14 @@ class ToDo extends Component {
   render() {
     return (
       <div>
-        <ToDoFrom submitForm={this.submitForm} />
-        <ToDoShow todo={this.state.todoList} deleteTask={this.deleteTask} />
+        {this.props.location.state ? (
+          <div>
+            <ToDoFrom submitForm={this.submitForm} />
+            <ToDoShow todo={this.state.todoList} deleteTask={this.deleteTask} />
+          </div>
+        ) : (
+          <h1>Login First</h1>
+        )}
       </div>
     );
   }

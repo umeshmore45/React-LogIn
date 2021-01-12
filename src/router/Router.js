@@ -7,6 +7,10 @@ import SignUp from "../pages/SignUp";
 import ToDo from "../pages/ToDo";
 
 class RouterRoute extends Component {
+  state = {
+    isLogged: false,
+  };
+
   render() {
     return (
       <>
@@ -15,8 +19,10 @@ class RouterRoute extends Component {
             <Route path="/" exact component={Home} />
             <Route path="/signup" exact component={SignUp} />
             <Route path="/login" exact component={LogIn} />
+
             <Route path="/todo" exact component={ToDo} />
-            <Route component={NotFound} />
+
+            <Route exact component={NotFound} />
           </Switch>
         </Router>
       </>

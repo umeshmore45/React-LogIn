@@ -5,7 +5,27 @@ import { signUpUrl } from "../services/FetchData";
 
 class SignUp extends Component {
   state = {
-    user: [],
+    email: "",
+    password: "",
+    confromPassword: "",
+  };
+
+  updateEmail = (event) => {
+    this.setState({
+      email: event.target.value,
+    });
+  };
+
+  updatePassword = (event) => {
+    this.setState({
+      password: event.target.value,
+    });
+  };
+
+  updateConPassWord = (event) => {
+    this.setState({
+      confirmPassword: event.target.value,
+    });
   };
 
   changeRoute = (event) => {
@@ -14,18 +34,18 @@ class SignUp extends Component {
 
   SignUpSubmit = (event) => {
     event.preventDefault();
-    console.log(event.target.SignUpEmail.value);
-    console.log(event.target.SignUpPassword.value);
-    console.log(event.target.SignUpConPassword.value);
+    console.log(this.state.email);
+    console.log(this.state.password);
+    console.log(this.state.confromPassword);
     fetch(signUpUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email: event.target.SignUpEmail.value,
-        password: event.target.SignUpPassword.value,
-        confirmPassword: event.target.SignUpConPassword.value,
+        email: this.state.email,
+        password: this.state.password,
+        confirmPassword: this.state.password,
       }),
     })
       .then((response) => {
@@ -46,7 +66,12 @@ class SignUp extends Component {
     return (
       <div>
         <h1>Sign Up</h1>
-        <SignUpFrom SignUpSubmit={this.SignUpSubmit} />
+        <SignUpFrom
+          SignUpSubmit={this.SignUpSubmit}
+          updateEmail={this.updateEmail}
+          updatePassword={this.updatePassword}
+          updateConPassWord={this.updateConPassWord}
+        />
       </div>
     );
   }

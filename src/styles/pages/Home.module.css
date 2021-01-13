@@ -1,7 +1,25 @@
 .main-container {
-  background: url("https://cdn.dribbble.com/users/160641/screenshots/14505381/media/db196b23526697e8740551c27da53d46.gif");
+  background-image: url("https://cdn.dribbble.com/users/1299339/screenshots/10879984/media/91b1d397bbcfc663d6cfec01798f4d5d.gif");
   background-size: cover;
-  height: 120vh;
+  height: auto;
+  max-width: 100%;
   margin: 0%;
   padding: 0%;
+  text-align: center;
+}
+
+.button {
+  margin-top: 50%;
+}
+
+.heading {
+  margin-top: 5%;
+}
+
+.but-st {
+  background-color: black;
+  color: white;
+  width: 10%;
+  padding: 1%;
+  margin: 1%;
 }

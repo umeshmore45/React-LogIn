@@ -2,7 +2,7 @@ import { Component } from "react";
 import { withRouter } from "react-router-dom";
 import SignUpFrom from "../component/SignUpFrom";
 import { signUpUrl } from "../services/FetchData";
-
+import styles from "../styles/pages/SignUp.module.css";
 class SignUp extends Component {
   state = {
     email: "",
@@ -67,7 +67,7 @@ class SignUp extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles["main"]}>
         <h1>Sign Up</h1>
         <SignUpFrom
           SignUpSubmit={this.SignUpSubmit}

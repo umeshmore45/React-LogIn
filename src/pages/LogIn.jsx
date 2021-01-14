@@ -70,7 +70,6 @@ class LogIn extends Component {
   render() {
     return (
       <div>
-        <h1>Login</h1>
         <LogInFrom
           LogInSubmit={this.LogInSubmit}
           updateEmail={this.updateEmail}

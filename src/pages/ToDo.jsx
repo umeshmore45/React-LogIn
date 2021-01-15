@@ -2,6 +2,7 @@ import { Component } from "react";
 import ToDoFrom from "../component/ToDoFrom";
 import ToDoShow from "../component/ToDoShow";
 import { todoUrl } from "../services/FetchData";
+import styles from "../styles/pages/ToDo.module.css";
 
 class ToDo extends Component {
   state = {
@@ -94,13 +95,19 @@ class ToDo extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles["todo"]}>
         {this.props.location.state ? (
           <div>
-            <p>
+            <p className={styles["para"]}>
+              Hello{" "}
               {this.state.email.substring(0, this.state.email.lastIndexOf("@"))}
             </p>
-            <button onClick={this.componentWillUnmount}>Log Out</button>
+            <button
+              onClick={this.componentWillUnmount}
+              className={styles["btn"]}
+            >
+              Log Out
+            </button>
             <ToDoFrom submitForm={this.submitForm} />
             <ToDoShow todo={this.state.todoList} deleteTask={this.deleteTask} />
           </div>

@@ -1,15 +1,23 @@
-.todo {
-  background-image: url("https://cdn.dribbble.com/users/274876/screenshots/12074340/media/6067ba51a3da5bf15d4353da1ff4279b.jpg");
-  width: 100%;
-  height: 100vh;
+.form {
+  width: 80%;
+  margin: 5% auto;
+  text-align: center;
+  height: 20vh;
 }
 
-.para {
-  display: inline;
+.label {
+  font-size: 5vh;
+  display: block;
+  margin-bottom: 2%;
+}
+
+.input {
+  width: 40%;
+  height: 5vh;
+  background-color: transparent;
 }
 
 .btn {
-  width: 30%;
   border-radius: 23px;
   text-align: center;
   vertical-align: middle;

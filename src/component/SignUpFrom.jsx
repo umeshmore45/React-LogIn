@@ -37,7 +37,7 @@ class SignUpFrom extends Component {
             <br />
             <br />
             <label htmlFor="SignUpConPassword">
-              Confrom Password<span className="span-global">* </span>{" "}
+              Confirm Password<span className="span-global">* </span>{" "}
             </label>
             <input
               type="passWord"
@@ -51,7 +51,7 @@ class SignUpFrom extends Component {
               Already A Registered ? Click Here To
               <Link to="/login"> Login</Link>{" "}
             </p>
-            <button className={styles["but"]} type="submit">
+            <button className={styles["but1"]} type="submit">
               Register
             </button>
             <Link to="/">

@@ -4,6 +4,7 @@
   height: 80vh;
   flex-direction: row-reverse;
   margin: 0 auto;
+  margin-top: 5%;
 }
 
 .img-container {
@@ -15,7 +16,7 @@ img {
   height: 100%;
 }
 .form {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 50%;
   text-align: center;
   background-color: FADFE1;
@@ -23,6 +24,26 @@ img {
 
 .form-in {
   margin-top: 25%;
+}
+
+.but1 {
+  border-radius: 23px;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 15px 5%;
+  color: #fff;
+  transition: all 0.2s linear;
+  display: inline-block;
+  font-weight: 500;
+  color: white;
+  background-color: #4b68de;
+  border-color: #4b68de;
+  width: 20%;
+  margin-left: 3%;
 }
 
 .but {

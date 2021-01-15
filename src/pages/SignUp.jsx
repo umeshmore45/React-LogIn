@@ -68,7 +68,6 @@ class SignUp extends Component {
   render() {
     return (
       <div className={styles["main"]}>
-        <h1>Sign Up</h1>
         <SignUpFrom
           SignUpSubmit={this.SignUpSubmit}
           updateEmail={this.updateEmail}

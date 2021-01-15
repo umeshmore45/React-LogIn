@@ -15,14 +15,20 @@ class Home extends Component {
         ) : (
           <p></p>
         )}
-        <div className={styles["button"]}></div>
-        <Link to="/signup">
-          {" "}
-          <button className={styles["but-st"]}>SignUp </button>
-        </Link>
-        <Link to="/login">
-          <button className={styles["but-st"]}>LogIn</button>
-        </Link>
+        <img
+          src="https://cdn.dribbble.com/users/2851002/screenshots/9667092/media/09648e273e248e7cfd22ade4010b2a6e.gif"
+          alt="gif"
+          className={styles["img"]}
+        />
+        <div className={styles["button"]}>
+          <Link to="/signup">
+            {" "}
+            <button className={styles["but-st"]}>SignUp </button>
+          </Link>
+          <Link to="/login">
+            <button className={styles["but-st"]}>LogIn</button>
+          </Link>
+        </div>
       </div>
     );
   }

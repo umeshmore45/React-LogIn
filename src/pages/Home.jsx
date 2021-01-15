@@ -6,7 +6,7 @@ class Home extends Component {
   render() {
     return (
       <div className={styles["main-container"]}>
-        <h1>Welcome Home</h1>
+        <h1 className={styles["heading"]}>Welcome Home</h1>
         {this.props.location.state ? (
           <p>
             {this.props.location.state.status} SignUp{" "}
@@ -15,14 +15,20 @@ class Home extends Component {
         ) : (
           <p></p>
         )}
-
-        <Link to="/signup">
-          {" "}
-          <button>SignUp </button>
-        </Link>
-        <Link to="/login">
-          <button>LogIn</button>
-        </Link>
+        <img
+          src="https://cdn.dribbble.com/users/2851002/screenshots/9667092/media/09648e273e248e7cfd22ade4010b2a6e.gif"
+          alt="gif"
+          className={styles["img"]}
+        />
+        <div className={styles["button"]}>
+          <Link to="/signup">
+            {" "}
+            <button className={styles["but-st"]}>SignUp </button>
+          </Link>
+          <Link to="/login">
+            <button className={styles["but-st"]}>LogIn</button>
+          </Link>
+        </div>
       </div>
     );
   }

@@ -1,19 +1,21 @@
 import { Component } from "react";
+import styles from "./ToDoShow.module.css";
 
 class ToDoShow extends Component {
   render() {
     return (
-      <div>
+      <div className={styles["task"]}>
         <div>
           {this.props.todo.map((task) => {
             return (
-              <div key={task.taskID}>
+              <div key={task.taskID} className={styles["flex"]}>
                 {" "}
-                <p>{task.taskName}</p>{" "}
+                <p className={styles["para"]}>{task.taskName}</p>{" "}
                 <button
                   onClick={(e) => {
                     this.props.deleteTask(task.taskID, e);
                   }}
+                  className={styles["btn"]}
                 >
                   Delete
                 </button>

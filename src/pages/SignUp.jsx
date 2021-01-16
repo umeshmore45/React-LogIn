@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { withRouter } from "react-router-dom";
+import Footer from "../component/Footer";
 import Navigation from "../component/Navigation";
 import SignUpFrom from "../component/SignUpFrom";
 import { signUpUrl } from "../services/FetchData";
@@ -76,6 +77,7 @@ class SignUp extends Component {
           updatePassword={this.updatePassword}
           updateConPassWord={this.updateConPassWord}
         />
+        <Footer color={"footer-blue"} />
       </div>
     );
   }

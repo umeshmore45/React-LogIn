@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../component/Footer";
 import Navigation from "../component/Navigation";
 import styles from "../styles/pages/Home.module.css";
 
@@ -31,6 +32,7 @@ class Home extends Component {
             <button className={styles["but-st"]}>LogIn</button>
           </Link>
         </div>
+        <Footer color={"footer-red"} />
       </div>
     );
   }

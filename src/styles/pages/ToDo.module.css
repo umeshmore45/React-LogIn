@@ -28,3 +28,7 @@
   width: 15%;
   margin-left: 3%;
 }
+
+.btn:hover {
+  color: black;
+}

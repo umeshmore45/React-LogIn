@@ -1,5 +1,5 @@
 import { Component } from "react";
-import styles from "./ToDoShow.module.css";
+import styles from "../styles/component/ToDoShow.module.css";
 
 class ToDoShow extends Component {
   render() {

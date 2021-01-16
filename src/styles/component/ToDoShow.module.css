@@ -1,0 +1,45 @@
+.task {
+  width: 80%;
+  margin: 2% auto;
+  text-align: center;
+  height: 10vh;
+}
+.flex {
+  background-color: #d1e3d680;
+  margin-top: 3%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 25%;
+}
+
+.para {
+  width: 70%;
+  margin-top: 1%;
+  display: inline;
+}
+
+.btn {
+  width: 30%;
+  border-radius: 23px;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 15px 5%;
+  color: #fff;
+  transition: all 0.2s linear;
+  display: inline-block;
+  font-weight: 500;
+  color: white;
+  background-color: #4b68de;
+  border-color: #4b68de;
+  width: 15%;
+  margin-left: 3%;
+}
+
+.btn:hover {
+  color: black;
+}

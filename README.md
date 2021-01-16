@@ -1,6 +1,67 @@
-# Getting Started with Create React App
+# Login Page Form Submission
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![alt text](https://raw.githubusercontent.com/umeshmore45/Timer-Application/master/img/logo.png)
+
+## Features
+- Build with React-Dom & React-Router 
+
+- Hosted On [Vercel](https://vercel.com/)
+
+- Backend Hosted On [Heroku](https://www.heroku.com/home)
+
+
+- Home Page Have SignUp & Login button
+
+- App Have Login Page &  SignUp Page After LogIn ToDoList Load 
+
+- rendering  data Using  Backend Server 
+
+## Dummy User  
+
+- Email
+
+``
+umeshmore643@gmail.com
+``
+
+- PassWord
+
+``
+Pass@123
+``
+
+
+1.At least one upper case English letter
+
+2.At least one lower case English letter
+
+3.At least one digit
+
+4.At least one special character
+
+5.Minimum eight in length
+
+
+## Get Started
+
+![alt text](https://media.giphy.com/media/11BbGyhVmk4iLS/giphy.gif)
+
+
+## Clone project
+
+```
+git clone https://github.com/umeshmore45/React-LogIn.git
+```
+## Install Dependency
+
+```
+npm install
+```
+## Run App
+```
+npm run start
+```
+
 
 ## Available Scripts
 
@@ -29,16 +90,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -65,6 +116,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Demo Link
+
+ [Demo](https://react-log-in.vercel.app/)
+
+## Contact Me
+[Twitter](https://twitter.com/Iamdvirus45)
+
+
+
+

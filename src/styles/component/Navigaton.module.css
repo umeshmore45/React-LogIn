@@ -1,0 +1,34 @@
+.nav-red {
+  background-color: red;
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-blue {
+  background-color: #4b68de;
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-container {
+  width: 30%;
+}
+
+.nav-container {
+  width: 30%;
+  margin-top: 1%;
+}
+
+li {
+  display: inline;
+  margin-left: 7%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}

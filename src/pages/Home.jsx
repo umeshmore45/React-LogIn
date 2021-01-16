@@ -1,11 +1,13 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
+import Navigation from "../component/Navigation";
 import styles from "../styles/pages/Home.module.css";
 
 class Home extends Component {
   render() {
     return (
       <div className={styles["main-container"]}>
+        <Navigation color={"nav-red"} />
         <h1 className={styles["heading"]}>Welcome Home</h1>
         {this.props.location.state ? (
           <p>

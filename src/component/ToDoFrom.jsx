@@ -1,4 +1,4 @@
-import styles from "./ToDoFrom.module.css";
+import styles from "../styles/component/ToDoFrom.module.css";
 
 function ToDoFrom(props) {
   return (

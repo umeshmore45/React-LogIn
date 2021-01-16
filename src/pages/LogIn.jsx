@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { withRouter } from "react-router-dom";
+import Footer from "../component/Footer";
 import LogInFrom from "../component/LogInFrom";
+import Navigation from "../component/Navigation";
 import { logInurl } from "../services/FetchData";
 
 class LogIn extends Component {
@@ -70,12 +72,14 @@ class LogIn extends Component {
   render() {
     return (
       <div>
+        <Navigation color={"nav-blue"} />
         <LogInFrom
           LogInSubmit={this.LogInSubmit}
           updateEmail={this.updateEmail}
           updatePassword={this.updatePassword}
         />
         <p>{this.state.message.message}</p>
+        <Footer color={"footer-blue"} />
       </div>
     );
   }

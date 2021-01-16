@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import styles from "./LogInFrom.module.css";
+import styles from "../styles/component/LogInFrom.module.css";
 
 class LogInFrom extends Component {
   render() {

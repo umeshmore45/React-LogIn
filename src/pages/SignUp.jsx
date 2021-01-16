@@ -1,5 +1,7 @@
 import { Component } from "react";
 import { withRouter } from "react-router-dom";
+import Footer from "../component/Footer";
+import Navigation from "../component/Navigation";
 import SignUpFrom from "../component/SignUpFrom";
 import { signUpUrl } from "../services/FetchData";
 import styles from "../styles/pages/SignUp.module.css";
@@ -68,12 +70,14 @@ class SignUp extends Component {
   render() {
     return (
       <div className={styles["main"]}>
+        <Navigation color={"nav-blue"} />
         <SignUpFrom
           SignUpSubmit={this.SignUpSubmit}
           updateEmail={this.updateEmail}
           updatePassword={this.updatePassword}
           updateConPassWord={this.updateConPassWord}
         />
+        <Footer color={"footer-blue"} />
       </div>
     );
   }

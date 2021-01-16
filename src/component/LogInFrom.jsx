@@ -22,6 +22,7 @@ class LogInFrom extends Component {
               name="LogInEmail"
               onChange={this.props.updateEmail}
               className={styles["Log-Email"]}
+              placeholder="random@gmail.com"
               required
             />
           </div>
@@ -35,6 +36,7 @@ class LogInFrom extends Component {
             <input
               type="passWord"
               name="LogInPassword"
+              placeholder="Pass@123"
               onChange={this.props.updatePassword}
               className={styles["Log-pass"]}
               required

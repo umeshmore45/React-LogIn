@@ -39,9 +39,7 @@ class SignUp extends Component {
 
   SignUpSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.email);
-    console.log(this.state.password);
-    console.log(this.state.confromPassword);
+
     fetch(signUpUrl, {
       method: "POST",
       headers: {

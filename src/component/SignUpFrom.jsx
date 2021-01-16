@@ -21,6 +21,7 @@ class SignUpFrom extends Component {
               type="email"
               name="SignUpEmail"
               onChange={this.props.updateEmail}
+              placeholder="random@gmail.com"
               required
             />
             <br />
@@ -32,6 +33,7 @@ class SignUpFrom extends Component {
               type="passWord"
               name="SignUpPassword"
               onChange={this.props.updatePassword}
+              placeholder="Pass@123"
               required
             />
             <br />
@@ -43,6 +45,7 @@ class SignUpFrom extends Component {
               type="passWord"
               name="SignUpConPassword"
               onChange={this.props.updateConPassWord}
+              placeholder="Pass@123"
               required
             />
             <br />

@@ -39,7 +39,6 @@ class ToDo extends Component {
   };
 
   deleteTask = (event) => {
-    console.log(event);
     fetch(`${todoUrl}/${event}`, {
       method: "DELETE",
       headers: {
@@ -81,7 +80,6 @@ class ToDo extends Component {
           return response.json();
         })
         .then((data) => {
-          console.log(data);
           this.setState({
             todoList: data,
           });

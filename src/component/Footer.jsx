@@ -2,7 +2,6 @@ import { Facebook, GitHub, LinkedIn, Twitter } from "@material-ui/icons";
 import styles from "../styles/component/Footer.module.css";
 
 function Footer(props) {
-  console.log(props);
   return (
     <div className={styles[props.color]}>
       <div className={styles["logo"]}>

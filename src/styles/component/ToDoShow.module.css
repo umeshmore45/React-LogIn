@@ -43,3 +43,9 @@
 .btn:hover {
   color: black;
 }
+
+@media (max-width: 767.98px) {
+  .btn {
+    width: 25%;
+  }
+}

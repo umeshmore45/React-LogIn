@@ -48,3 +48,9 @@
 .but-st:hover {
   color: #111412;
 }
+
+@media (max-width: 767.98px) {
+  .but-st {
+    width: 30%;
+  }
+}

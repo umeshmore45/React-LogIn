@@ -73,3 +73,25 @@ img {
 .but:hover {
   color: black;
 }
+
+@media (max-width: 767.98px) {
+  .Main-container {
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .img-container {
+    width: 100%;
+  }
+
+  .form {
+    width: 100%;
+  }
+  .but1 {
+    width: 30%;
+  }
+  .but {
+    width: 30%;
+  }
+}
